@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Огонь Вода | Табак, Чай, Кофе в Ростове-на-Дону</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=Geolink" type="text/javascript"></script>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">
+            <span class="fire">🔥</span> Огонь<span class="water">💧</span>Вода
+        </div>
+        <nav class="nav">
+            <a href="#catalog">Каталог</a>
+            <a href="#promo">Акции</a>
+            <a href="#about">О нас</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <h1>Чай, Кофе и Табак в Ростове-на-Дону</h1>
+        <p>Широкий ассортимент, приветливые продавцы и атмосфера, в которую хочется возвращаться.</p>
+        <a href="#catalog" class="btn">Смотреть каталог</a>
+    </section>
+
+    <!-- Акции (Слайдер) -->
+    <section id="promo" class="promo">
+        <h2>Акции и новинки</h2>
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+                <div class="slide">
+                    <img src="images/promo1.jpg" alt="Скидка на чай" onerror="this.src='https://via.placeholder.com/800x400?text=Скидка+на+Чай'">
+                    <div class="slide-caption">-20% на все сорта зелёного чая</div>
+                </div>
+                <div class="slide">
+                    <img src="images/promo2.jpg" alt="Новинка кофе" onerror="this.src='https://via.placeholder.com/800x400?text=Новинка+Кофе'">
+                    <div class="slide-caption">Новая обжарка кофе из Эфиопии</div>
+                </div>
+                <div class="slide">
+                    <img src="images/promo3.jpg" alt="Подарок к сигарам" onerror="this.src='https://via.placeholder.com/800x400?text=Подарок+к+Сигарам'">
+                    <div class="slide-caption">Подарок к набору сигар</div>
+                </div>
+            </div>
+            <button class="slider-btn prev" id="prevBtn">❮</button>
+            <button class="slider-btn next" id="nextBtn">❯</button>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+
+    <!-- Каталог с вкладками -->
+    <section id="catalog" class="catalog">
+        <h2>Наш ассортимент</h2>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="tea">🍵 Чай</button>
+            <button class="tab-btn" data-tab="coffee">☕ Кофе</button>
+            <button class="tab-btn" data-tab="tobacco">🚬 Табак</button>
+        </div>
+
+        <div class="tab-content">
+            <!-- Чай -->
+            <div class="tab-pane active" id="tea">
+                <div class="grid-cards">
+                    <div class="card">
+                        <img src="images/tea-green.jpg" alt="Зелёный чай" onerror="this.src='https://via.placeholder.com/300x200?text=Зелёный+Чай'">
+                        <h3>Зелёный чай</h3>
+                        <p>Свежие листья, лёгкость и бодрость.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/tea-black.jpg" alt="Чёрный чай" onerror="this.src='https://via.placeholder.com/300x200?text=Чёрный+Чай'">
+                        <h3>Чёрный чай</h3>
+                        <p>Классика с глубоким вкусом.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/tea-puer.jpg" alt="Пуэр" onerror="this.src='https://via.placeholder.com/300x200?text=Пуэр'">
+                        <h3>Пуэр</h3>
+                        <p>Для ценителей выдержанных сортов.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кофе -->
+            <div class="tab-pane" id="coffee">
+                <div class="grid-cards">
+                    <div class="card">
+                        <img src="images/coffee-beans.jpg" alt="Кофе в зёрнах" onerror="this.src='https://via.placeholder.com/300x200?text=Кофе+в+зёрнах'">
+                        <h3>Кофе в зёрнах</h3>
+                        <p>Свежая обжарка, насыщенный аромат.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/coffee-ground.jpg" alt="Молотый кофе" onerror="this.src='https://via.placeholder.com/300x200?text=Молотый+Кофе'">
+                        <h3>Молотый кофе</h3>
+                        <p>Помол под ваш способ заваривания.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/coffee-instant.jpg" alt="Растворимый кофе" onerror="this.src='https://via.placeholder.com/300x200?text=Растворимый+Кофе'">
+                        <h3>Растворимый</h3>
+                        <p>Быстро, удобно, привычно.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Табак -->
+            <div class="tab-pane" id="tobacco">
+                <div class="grid-cards">
+                    <div class="card">
+                        <img src="images/tobacco-sigarettes.jpg" alt="Сигареты" onerror="this.src='https://via.placeholder.com/300x200?text=Сигареты'">
+                        <h3>Сигареты</h3>
+                        <p>Широкий выбор марок.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/tobacco-cigar.jpg" alt="Сигары" onerror="this.src='https://via.placeholder.com/300x200?text=Сигары'">
+                        <h3>Сигары и сигариллы</h3>
+                        <p>Для особых случаев.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/tobacco-roll.jpg" alt="Табак для самокруток" onerror="this.src='https://via.placeholder.com/300x200?text=Самокрутки'">
+                        <h3>Табак для самокруток</h3>
+                        <p>Смеси и аксессуары.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О магазине -->
+    <section id="about" class="about">
+        <h2>Почему выбирают нас</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Широкий выбор</h3>
+                <p>От простых сортов чая до дорогих китайских и кубинских сигар.</p>
+            </div>
+            <div class="feature">
+                <h3>Помощь в выборе</h3>
+                <p>Продавцы помогут разобраться в ассортименте и подскажут лучшее.</p>
+            </div>
+            <div class="feature">
+                <h3>Удобное время</h3>
+                <p>Работаем с 8:00 в будни и с 11:00 в выходные.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы (Слайдер) -->
+    <section id="reviews" class="reviews">
+        <h2>Отзывы наших гостей</h2>
+        <div class="testimonials-slider">
+            <div class="testimonial-card active">
+                <p class="testimonial-text">«Отличный магазин! Всегда большой выбор чая и кофе. Продавцы помогают подобрать именно то, что нужно.»</p>
+                <p class="testimonial-author">— Анна, Ростов-на-Дону</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">«Захожу за сигарами для особых случаев. Ассортимент радует, есть действительно редкие позиции.»</p>
+                <p class="testimonial-author">— Дмитрий, Ростов-на-Дону</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">«Цены приятные, обслуживание быстрое. Рекомендую всем любителям кофе.»</p>
+                <p class="testimonial-author">— Елена, Ростов-на-Дону</p>
+            </div>
+        </div>
+        <div class="testimonial-dots" id="testimonialDots"></div>
+    </section>
+
+    <!-- Контакты + Форма -->
+   <!-- Контакты + Форма + Telegram -->
+    <section id="contacts" class="contacts">
+        <h2>Наши адреса</h2>
+        <div class="addresses">
+            <div class="address-card">
+                <h3>пр. Соколова, 61</h3>
+                <p>Пн–Пт: 8:00–22:00<br>Сб–Вс: 11:00–22:00</p>
+                <p>Тел: <a href="tel:+79081888108">+7 (908) 188-81-08</a></p>
+                <p><span class="ymaps-geolink" data-type="biz" data-description="Огонь Вода на Соколова">Ростов-на-Дону, пр. Соколова, 61</span></p>
+            </div>
+            <div class="address-card">
+                <h3>пр. Чехова, 78</h3>
+                <p>Пн–Пт: 8:00–22:00<br>Сб–Вс: 11:00–22:00</p>
+                <p>Тел: <a href="tel:+79081888108">+7 (908) 188-81-08</a></p>
+                <p><span class="ymaps-geolink" data-type="biz" data-description="Огонь Вода на Чехова">Ростов-на-Дону, пр. Чехова, 78</span></p>
+            </div>
+            <div class="address-card">
+                <h3>ул. Социалистическая, 80</h3>
+                <p>Пн–Пт: 8:00–22:00<br>Сб–Вс: 11:00–22:00</p>
+                <p>Тел: <a href="tel:+79081888108">+7 (908) 188-81-08</a></p>
+                <p><span class="ymaps-geolink" data-type="biz" data-description="Огонь Вода на Социалистической">Ростов-на-Дону, ул. Социалистическая, 80</span></p>
+            </div>
+        </div>
+        <!-- Telegram-канал -->
+        <div class="telegram">
+            <h3>📢 Наш Telegram-канал</h3>
+            <p>Новинки, акции и анонсы — первыми узнавайте о поступлениях.</p>
+            <a href="https://t.me/ВАША_ССЫЛКА" target="_blank" rel="noopener" class="tg-btn">
+                Подписаться на канал
+            </a>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p>&copy; 2026 Огонь Вода.</p>
+        
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
